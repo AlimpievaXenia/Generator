@@ -1,0 +1,22 @@
+<header class="p-3 bg-dark text-white">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-bd-0">
+        <li>
+          <a class="nav-link px-2 text-secondary" href="/">Главная</a>
+        </li>
+      </ul>
+      <div class="text-end">
+        {{#unless user}}
+        <button type="button" class="btn btn-outline-info me-2"><a href="/authorization">Войти</a></button>
+        <button type="button" class="btn btn-info"><a href="/registration">Зарегистрироваться</a></button>
+        {{/unless}}
+        {{#if user}}
+        <button type="button" class="btn btn-info"><a href="/cabinet">Личный кабинет</a></button>
+        <button type="button" class="btn btn-info"><a href="/new">Создать своё занятие</a></button>
+        <button type="button" class="btn btn-info"><a href="/logout">Выйти</a></button>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</header>
